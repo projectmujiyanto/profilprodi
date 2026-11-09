@@ -1,0 +1,434 @@
+/* =====================================
+   BOX MODEL
+   Menggunakan box-sizing border-box
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pengaturan dasar halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Ukuran dan jarak navbar */
+.navbar {
+    width: 100%;
+    padding: 15px 8%;
+    border-bottom: 3px solid #f5c542;
+    margin: 0;
+}
+
+/* Pengaturan area profil */
+.profil {
+    padding: 50px 10%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
+
+/* Pengaturan card */
+.card {
+    width: 100%;
+    padding: 30px;
+    margin: 0;
+    border: 2px solid #2878a8;
+    border-radius: 12px;
+    background-color: white;
+}
+
+/* Pengaturan tombol */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border: 2px solid #f5c542;
+    border-radius: 25px;
+}
+
+/* =====================================
+   1. UNIVERSAL SELECTOR
+   Memilih seluruh elemen HTML
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* =====================================
+   2. ELEMENT SELECTOR
+   Memilih elemen berdasarkan tag HTML
+===================================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Element selector */
+h2 {
+    text-align: center;
+    color: #123c69;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* =====================================
+   3. CLASS SELECTOR
+   Memilih elemen berdasarkan class
+===================================== */
+.navbar {
+    background-color: #123c69;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+/* =====================================
+   4. DESCENDANT COMBINATOR
+   Memilih elemen small di dalam .logo
+===================================== */
+.logo small {
+    display: block;
+    font-size: 12px;
+    color: #f5c542;
+    letter-spacing: 3px;
+}
+
+/* Class selector */
+.logo span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navbar sticky */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* =====================================
+   5. CHILD COMBINATOR (>)
+   Memilih li yang merupakan anak langsung ul
+===================================== */
+.nav-menu > li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+}
+
+/* =====================================
+   6. ATTRIBUTE SELECTOR
+   Memilih a yang memiliki atribut href
+===================================== */
+.nav-menu a[href] {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* =====================================
+   7. PSEUDO-CLASS :HOVER
+   Efek ketika mouse diarahkan ke link
+===================================== */
+.nav-menu a:hover {
+    color: #f5c542;
+}
+
+/* =====================================
+   8. PSEUDO-CLASS :FOCUS
+   Efek ketika link mendapat fokus keyboard
+===================================== */
+.nav-menu a:focus {
+    outline: 2px solid #f5c542;
+    outline-offset: 4px;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+.hero {
+    min-height: 450px;
+    background: linear-gradient(
+        135deg,
+        #123c69,
+        #2878a8
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle {
+    color: #f5c542;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* Class selector */
+.btn {
+    display: inline-block;
+    background-color: #f5c542;
+    color: #123c69;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Pseudo-class :hover */
+.btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   PROFIL SECTION
+===================================== */
+.profil {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.profil p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* =====================================
+   CARD SECTION
+===================================== */
+.card-section {
+    padding: 60px 8%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* =====================================
+   9. GROUPING SELECTOR
+   Mengatur beberapa elemen sekaligus
+===================================== */
+.card h3,
+.card p {
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   10. CLASS SELECTOR
+   Mengatur tampilan card
+===================================== */
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-bottom: 4px solid #2878a8;
+}
+
+/* Pseudo-class :hover */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =====================================
+   11. PSEUDO-ELEMENT ::BEFORE
+   Menambahkan garis dekorasi sebelum judul
+===================================== */
+.card h3::before {
+    content: "◆ ";
+    color: #2878a8;
+}
+
+/* Class selector */
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+footer {
+    background-color: #123c69;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+/* =====================================
+   12. PSEUDO-CLASS :FIRST-CHILD
+   Memilih paragraf pertama dalam footer
+===================================== */
+footer p:first-child {
+    color: #f5c542;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu > li {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profil {
+        padding: 40px 7%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .nav-menu a[href] {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* =====================================
+   1. POSITION: STICKY
+   Navbar tetap menempel di atas halaman
+===================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* =====================================
+   2. POSITION: RELATIVE
+   Hero menjadi acuan posisi elemen absolute
+===================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 450px;
+}
+
+/* =====================================
+   3. POSITION: ABSOLUTE
+   Dekorasi diposisikan relatif terhadap hero
+===================================== */
+
+.hero-decoration {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(245, 197, 66, 0.15);
+    border: 3px solid rgba(245, 197, 66, 0.4);
+    border-radius: 50%;
+    top: 30px;
+    right: 50px;
+    z-index: 1;
+}
+
+/* Konten hero berada di atas dekorasi */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================
+   4. POSITION: FIXED
+   Tombol kembali ke atas tetap di layar
+===================================== */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #f5c542;
+    color: #123c69;
+    border: 2px solid #123c69;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 2000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Efek hover tombol */
+.back-to-top:hover {
+    background-color: #123c69;
+    color: white;
+}
